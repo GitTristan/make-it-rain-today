@@ -83,3 +83,8 @@ production:
   database: make-it-rain-today_production
   username: make-it-rain-today
   password: <%= ENV['MAKE-IT-RAIN-TODAY_DATABASE_PASSWORD'] %>
+
+test:
+  adapter: postgresql
+  database: travis_ci_test
+  username: postgres
