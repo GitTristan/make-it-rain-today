@@ -15,3 +15,24 @@
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+  body {
+    background:black !important;
+    color: #216C2A;
+  }
+
+  nav {
+    background:black !important;
+  }
+
+  .jumbotron{
+    background: #999999;
+  }
+
+  .well{
+    background: #216C2A;
+  }
+
+  a:link {
+    color: #216C2A;
+  }
