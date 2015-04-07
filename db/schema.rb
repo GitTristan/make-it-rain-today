@@ -11,33 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150407162350) do
+ActiveRecord::Schema.define(version: 20150407200106) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "frequencies", force: :cascade do |t|
+  create_table "plans", force: :cascade do |t|
     t.string   "type"
-    t.integer  "gif_collection_id"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
-  end
-
-  create_table "gif_collection_members", force: :cascade do |t|
-    t.integer  "gif_collection_id"
-    t.integer  "gif_id"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
-  end
-
-  create_table "gif_collections", force: :cascade do |t|
-    t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "gifs", force: :cascade do |t|
-    t.string "url"
+  create_table "users", force: :cascade do |t|
+    t.string   "slack_org"
+    t.integer  "plan_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
