@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature 'Clients' do
+feature 'Welcome' do
 
   scenario 'User sees headline' do
 
