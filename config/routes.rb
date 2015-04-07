@@ -2,8 +2,8 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
-  resources :frequencies
-
-  
+  resources :users do
+    resources :plans
+  end
 
 end
