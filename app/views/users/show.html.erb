@@ -1,11 +1,16 @@
 <div class="container">
 
-  <h1>User Name</h1>
-  <br />
+  <div class="pull-right">
+    <%= link_to "Send a Test to my Channel", edit_user_path(@user), class: "btn btn-danger btn-lg" %>
+  </div>
 
   <div class="pull-right">
-    <%= link_to "Lets Get Started", edit_user_path(@user), class: "btn btn-success btn-lg" %>
+    <%= link_to "Lets Get Started By Updating Your Info", edit_user_path(@user), class: "btn btn-success btn-lg" %>
   </div>
+
+
+  <h1>User Name</h1>
+  <br />
 
   <dl class="dl-horizontal">
     <dt>Slack Org. Name</dt>
@@ -14,8 +19,12 @@
     <dd><%= @user.slack_webhook %></dd>
     <dt>Stripe Webhook URL</dt>
     <dd><%= @user.slack_org %></dd>
-
   </dl>
+
+  <br />
+  <div class="text-center">
+    <%= image_tag("eastbound.gif") %>
+  </div>
 
 
 </div>
