@@ -12,6 +12,9 @@ source 'https://rubygems.org'
   gem 'bootstrap-sass', '~> 3.3.3'
   gem 'rails_12factor'
   gem 'slack-notifier', '~> 1.1.0'
+  gem 'devise'
+  gem 'omniauth-stripe-connect'
+  gem 'dotenv-rails', :groups => [:development, :test]
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

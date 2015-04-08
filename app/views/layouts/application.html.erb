@@ -12,8 +12,16 @@
         <div class="container">
           <p class="navbar-brand">
             <h3><%= link_to "MakeItRain.Today", root_path %></h3>
-            </div>
           </p>
+          <div class="pull-right">
+            <% if user_signed_in? %>
+              Signed in as <%= current_user.email %>. Not you?
+              <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+            <% else %>
+              <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
+              <%= link_to image_tag('blue-on-dark@2x.png'), user_omniauth_authorize_path(:stripe_connect) %>
+            <% end %>
+          </div>
         </div>
         <br />
       </nav>
@@ -23,9 +31,9 @@
     <br />
   </div>
 
-  <!-- <% if flash[:notice] %>
+  <% if flash[:notice] %>
     <div class="alert alert-success text-center" role="alert"><%= flash[:notice] %></div>
-  <% end %> -->
+  <% end %>
 
 <%= yield %>
 
