@@ -1,8 +1,8 @@
 class SlackWebhooksController < ApplicationController
 
   def new
-    @user = User.find(params[:id])
-    @slack_webhook = @user.slack_webhook
+    # @user = current_user
+    # @slack_webhook = @user.slack_webhook
     @random_gif = [ "http://i.imgur.com/ptqA6dW.gif",
                     "http://i.imgur.com/r1o0uyH.gif",
                     "http://i.imgur.com/N0aYJTJ.gif",
@@ -30,13 +30,13 @@ class SlackWebhooksController < ApplicationController
                     "http://i.imgur.com/AbHWKoc.gif"
                   ].sample
 
-    notifier = Slack::Notifier.new "#{@slack_webhook}"
+    notifier = Slack::Notifier.new "https://hooks.slack.com/services/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"
 
     notifier.channel  = '#makeitraintoday'
     notifier.username = 'makeitrain.today'
     notifier.ping "#{@random_gif}", icon_emoji: ":heavy_dollar_sign:"
 
-    redirect_to user_path(@user)
+    redirect_to root_path
   end
 
 

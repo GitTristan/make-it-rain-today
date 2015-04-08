@@ -8,7 +8,7 @@
 
 
   <br />
-  <h2>2) What is your Slack organization name?</h2>
+  <h2>2) What is your Slack organization name and channel?</h2>
   <h4>Example: https://YOUR_SLACK_ORG.slack.com</h4>
   <br />
 
@@ -21,6 +21,16 @@
         <%= f.text_field :slack_org, class: "form-control" %>
       </div>
     </div>
+    <br />
+    <h4>Example: #general </h4>
+    <br />
+    <div class="form-group">
+      <%= f.label :slack_channel, class: "col-md-2 control-label" %>
+      <div class="col-md-4">
+        <%= f.text_field :slack_channel, class: "form-control" %>
+      </div>
+    </div>
+
 
   <br />
   <br />
