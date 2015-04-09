@@ -20,7 +20,6 @@ class SlackWebhooksController < ApplicationController
                     "http://i.imgur.com/PbADlZW.gif",
                     "http://i.imgur.com/dgBtPpD.gif",
                     "http://i.imgur.com/2BgTeUI.gif",
-                    "http://i.imgur.com/OYAgYcf.gif",
                     "http://i.imgur.com/gh7uW50.gif",
                     "http://i.imgur.com/6fYah3Z.gif",
                     "http://i.imgur.com/yuB67q5.gif",
