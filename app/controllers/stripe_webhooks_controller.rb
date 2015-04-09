@@ -1,0 +1,6 @@
+class StripeWebhooksController < ApplicationController
+
+
+
+
+end
