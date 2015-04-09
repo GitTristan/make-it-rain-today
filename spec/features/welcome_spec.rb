@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 feature 'Welcome' do
-
   scenario 'User sees headline' do
 
     visit root_path
