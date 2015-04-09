@@ -3,12 +3,12 @@
   <br />
   <h2>1) You will need to create a Webhook in Stripe</h2>
   <br />
-
   <%= image_tag("webhook_screen.png") %>
-
-
+  <br />
+  <br />
   <br />
   <h2>2) What is your Slack organization name?</h2>
+  <br />
   <h4>Example: https://YOUR_SLACK_ORG.slack.com</h4>
   <br />
 
@@ -21,10 +21,18 @@
         <%= f.text_field :slack_org, class: "form-control" %>
       </div>
     </div>
-
+    <br />
+    <h4>Example: #general</h4>
+    <br />
+    <div class="form-group">
+      <%= f.label :slack_channel, class: "col-md-2 control-label" %>
+      <div class="col-md-4">
+        <%= f.text_field :slack_channel, class: "form-control" %>
+      </div>
+    </div>
   <br />
   <br />
-  <h2>3) You will need to create a incoming Webhook in Slack</h2>
+  <h2>3) You will need to create an inbound Webhook in Slack</h2>
   <br />
 
     <div class="form-group">
