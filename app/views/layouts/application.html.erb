@@ -14,7 +14,7 @@
             <h1>MakeItRain.Today</h1>
           <div class="pull-right">
             <% if current_user %>
-              <h3>I AM THE RAINMAKER</h3>
+              <%= link_to "Take me to my User Profile", user_path(current_user.id), class: "btn btn-success btn-lg" %>
             <% else %>
               <%= link_to image_tag('blue-on-dark@2x.png'), user_omniauth_authorize_path(:stripe_connect) %>
             <% end %>
