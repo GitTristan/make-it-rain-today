@@ -6,5 +6,4 @@ class StripeWebhooksController < ApplicationController
   #
   # end
 
-
 end

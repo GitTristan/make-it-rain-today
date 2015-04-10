@@ -26,5 +26,4 @@ class UsersController < ApplicationController
     params.require(:user).permit(:slack_org, :plan_id, :slack_webhook, :slack_channel)
   end
 
-
 end

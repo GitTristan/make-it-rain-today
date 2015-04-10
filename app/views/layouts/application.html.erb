@@ -8,21 +8,21 @@
 </head>
 <body>
   <div class="container">
-      <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-          <p class="navbar-brand">
-            <h1>MakeItRain.Today</h1>
-          <div class="pull-right">
-            <% if current_user %>
-              <%= link_to "Take me to my User Profile", user_path(current_user.id), class: "btn btn-success btn-lg" %>
-            <% else %>
-              <%= link_to image_tag('blue-on-dark@2x.png'), user_omniauth_authorize_path(:stripe_connect) %>
-            <% end %>
-          </div>
-        </p>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <p class="navbar-brand">
+          <h1>MakeItRain.Today</h1>
+        <div class="pull-right">
+          <% if current_user %>
+            <%= link_to "Take me to my User Profile", user_path(current_user.id), class: "btn btn-success btn-lg" %>
+          <% else %>
+            <%= link_to image_tag('blue-on-dark@2x.png'), user_omniauth_authorize_path(:stripe_connect) %>
+          <% end %>
         </div>
-        <br />
-      </nav>
+      </p>
+      </div>
+      <br />
+    </nav>
 <br />
 <br />
 <br />
