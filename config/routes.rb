@@ -7,10 +7,8 @@ Rails.application.routes.draw do
   get 'slack_hook', to: 'slack_webhooks#new'
   post 'stripe_hook', to: 'stripe_webhooks#webhook'
 
-  mount StripeEvent::Engine, at: '/stripe_hook'
+  #mount StripeEvent::Engine, at: '/stripe_hook'
 
-  resources :users do
-    resources :plans
-  end
+  resources :users 
 
 end

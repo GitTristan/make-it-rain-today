@@ -37,5 +37,4 @@ class SlackWebhooksController < ApplicationController
   end
 
 
-
 end
