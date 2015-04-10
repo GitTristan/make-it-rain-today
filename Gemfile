@@ -14,6 +14,8 @@ source 'https://rubygems.org'
   gem 'slack-notifier', '~> 1.1.0'
   gem 'devise'
   gem 'omniauth-stripe-connect'
+  gem 'faraday', '~> 0.9.1'
+  gem 'stripe_event'
   gem 'dotenv-rails', :groups => [:development, :test]
 
 # Use ActiveModel has_secure_password
